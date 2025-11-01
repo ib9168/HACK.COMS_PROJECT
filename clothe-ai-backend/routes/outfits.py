@@ -3,7 +3,7 @@ from fastapi import APIRouter
 from pydantic import BaseModel
 from typing import List
 from services import gemini_service
-from models import garment as garment_model # Alias to avoid confusion with the file name
+from models import garment as garment_model #  to avoid confusion with the file name
 
 router = APIRouter(prefix="/api/outfits", tags=["Outfits"])
 
@@ -17,7 +17,7 @@ class GarmentPair(BaseModel):
     userId: str
     garmentIds: List[str] # List of IDs for the items the user selected to pair
 
-# --- 1. Endpoint for "Find ideas" (uses generate_outfit_idea) ---
+# 1. Endpoint for "Find ideas" (uses generate_outfit_idea) 
 @router.post("/find-ideas")
 async def find_fashion_ideas(req: UserInput):
     """
@@ -27,7 +27,7 @@ async def find_fashion_ideas(req: UserInput):
     idea_text = gemini_service.generate_outfit_idea(req.text)
     return {"userId": req.userId, "idea": idea_text}
 
-# --- 2. Endpoint for parsing garment text (your existing analyze endpoint) ---
+# 2. Endpoint for parsing garment text (your existing analyze endpoint) 
 @router.post("/analyze")
 async def analyze_user_input(req: UserInput):
     """
@@ -37,7 +37,7 @@ async def analyze_user_input(req: UserInput):
     structured_data = gemini_service.parse_garment_text(req.text)
     return {"userId": req.userId, "parsed": structured_data}
 
-# --- 3. Endpoint for "Outfit" pairing (uses generate_outfit_from_closet) ---
+#  3. Endpoint for "Outfit" pairing (uses generate_outfit_from_closet) 
 @router.post("/generate")
 async def generate_outfit_pair(req: GarmentPair):
     """
