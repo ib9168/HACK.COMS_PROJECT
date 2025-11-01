@@ -1,0 +1,4 @@
+- Java: 21
+- JavaFX: 21
+- Maven: 3.11.0
+- OS: macOS (Apple Silicon)
