@@ -6,3 +6,15 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.geometry.Insets?>
+
+<VBox alignment="CENTER_LEFT" spacing="12.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clothes.ai.ClosetController">
+    <children>
+        <Label text="Closet" style="-fx-font-size: 24px;" />
+        <Button fx:id="shirtButton" text="Shirts" />
+        <Button fx:id="pantsButton" text="Pants" />
+        <Button text="Back" onAction="#handleBack" />
+    </children>
+    <padding>
+    <Insets top="20" right="20" bottom="20" left="20" />
+  </padding>
+</VBox>
