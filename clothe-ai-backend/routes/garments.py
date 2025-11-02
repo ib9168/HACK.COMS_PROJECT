@@ -3,7 +3,7 @@ from pydantic import BaseModel
 from typing import List, Optional, Dict, Any
 
 # Import the data access functions from the Model layer
-import models.garments as garment_model 
+import models.garment as garment_model 
 
 # Define the router instance (CRUCIAL for app.py to include this route)
 router = APIRouter(prefix="/api/garments", tags=["Closet Management"])
