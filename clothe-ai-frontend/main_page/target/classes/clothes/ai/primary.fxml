@@ -3,12 +3,17 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.geometry.Insets?>
 
-<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clothes.ai.PrimaryController">
+<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clothes.ai.PrimaryController">
    <children>
-      <Label text="Primary View" />
-      <Button fx:id="primaryButton" text="Switch to Secondary View" onAction="#switchToSecondary"/>
+      <Label text="AI Fashion Assistant" style="-fx-font-size: 24px;" />
+   <TextField fx:id="garmentInput" promptText="e.g., I have a red floral skirt" prefWidth="300" />
+   <Button fx:id="findIdeasButton" text="Find Ideas" onAction="#handleFindIdeas" style="-fx-font-size: 16px;" />
+   <Button fx:id="openLoginButton" text="Login" onAction="#handleOpenLogin" />
+   <TextArea fx:id="resultArea" prefRowCount="6" prefWidth="300" wrapText="true" />
    </children>
    <padding>
       <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
