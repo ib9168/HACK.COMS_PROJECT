@@ -19,7 +19,7 @@ public class PrimaryController {
     @FXML private TextField garmentInput;
     @FXML private TextArea resultArea;
 
-    private static final String BACKEND_URL = "http://127.0.0.1:8000";  // Changed to default FastAPI port
+    private static final String BACKEND_URL = "http://localhost:8000";
 
     @FXML
     private void handleFindIdeas() {
@@ -40,6 +40,15 @@ public class PrimaryController {
         } catch (IOException e) {
             // show a brief message in the result area if navigation fails
             resultArea.setText("Error opening login page: " + e.getMessage());
+        }
+    }
+
+    @FXML
+    private void handleOpenCloset() {
+        try {
+            App.setRoot("closet");
+        } catch (IOException e) {
+            resultArea.setText("Error opening closet page: " + e.getMessage());
         }
     }
 
