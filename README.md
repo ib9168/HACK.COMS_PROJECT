@@ -38,7 +38,7 @@ Deciding what to wear is time-consuming. We wanted to make fashion easier and sm
 
 ## 🔐 Environment Variables
 Create a `.env` file inside **`clothe-ai-backend/`**:
-# GOOGLE_API_KEY=your-real-key
+- **GOOGLE_API_KEY = your-real-key**
 > Tip: Do **not** hardcode keys in code or commit `.env`.
 
 ---
