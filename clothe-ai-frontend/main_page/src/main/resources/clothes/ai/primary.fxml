@@ -13,7 +13,7 @@
    <TextField fx:id="garmentInput" promptText="e.g., I have a red floral skirt" prefWidth="300" />
    <Button fx:id="findIdeasButton" text="Find Ideas" onAction="#handleFindIdeas" style="-fx-font-size: 16px;" />
    <Button fx:id="closetButton" text="Go to Closet" onAction="#handleOpenCloset" style="-fx-font-size: 16px;" /> 
-   <Button fx:id="openLoginButton" text="Login" onAction="#handleOpenLogin" />
+   <!-- <Button fx:id="openLoginButton" text="Login" onAction="#handleOpenLogin" /> -->
    <TextArea fx:id="resultArea" prefRowCount="6" prefWidth="300" wrapText="true" />
    </children>
    <padding>

@@ -19,7 +19,7 @@ public class PrimaryController {
     @FXML private TextField garmentInput;
     @FXML private TextArea resultArea;
 
-    private static final String BACKEND_URL = "http://127.0.0.1:8000";  // Changed to default FastAPI port
+    private static final String BACKEND_URL = "http://localhost:8000";
 
     @FXML
     private void handleFindIdeas() {
