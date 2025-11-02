@@ -3,7 +3,7 @@ from fastapi import FastAPI
 from dotenv import load_dotenv
 
 # Import routers
-from routes import outfits, garments
+from routes import outfits,  garments
 
 # Load environment variables (like the GEMINI_API_KEY)
 load_dotenv()

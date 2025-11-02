@@ -5,3 +5,6 @@ pydantic
 python-dotenv
 google
 google-genai
+pytest            
+httpx
+pandas

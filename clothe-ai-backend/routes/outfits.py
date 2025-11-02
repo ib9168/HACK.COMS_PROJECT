@@ -3,7 +3,7 @@ from fastapi import APIRouter
 from pydantic import BaseModel
 from typing import List
 from services import gemini_service
-from models import garment as garment_model #  to avoid confusion with the file name
+import models.garments as garment_model #  to avoid confusion with the file name
 
 router = APIRouter(prefix="/api/outfits", tags=["Outfits"])
 
