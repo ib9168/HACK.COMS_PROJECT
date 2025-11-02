@@ -43,6 +43,15 @@ public class PrimaryController {
         }
     }
 
+    @FXML
+    private void handleOpenCloset() {
+        try {
+            App.setRoot("closet");
+        } catch (IOException e) {
+            resultArea.setText("Error opening closet page: " + e.getMessage());
+        }
+    }
+
     private void callBackend(String endpoint, String text) {
         CompletableFuture.runAsync(() -> {
             try {

@@ -1,6 +1,5 @@
 package clothes.ai;
 
-import java.io.IOException;
 import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URI;
@@ -50,6 +49,30 @@ public class SecondaryController {
 
         resultArea.setText("Finding outfit ideas...");
         callBackend("/api/outfits/find-ideas", text);
+    }
+
+    @FXML
+    private void handleListGarments() {
+        String text = garmentInput.getText();
+        if (text == null || text.isBlank()) {
+            resultArea.setText("Please enter a type of garment first.");
+            return;
+        }
+
+        resultArea.setText("Listing garments...");
+        callBackend("/api/garments/", text);
+    }
+
+    @FXML
+    private void handleAddGarment() {
+        String garment = garmentInput.getText();
+        if (garment == null || garment.isBlank()) {
+            resultArea.setText("Please enter a type of garment first.");
+            return;
+        }
+
+        resultArea.setText("Adding garment...");
+        callBackend("/api/garments/{garment_id}", garment);
     }
 
     private void callBackend(String endpoint, String text) {
