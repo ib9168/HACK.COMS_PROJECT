@@ -15,5 +15,5 @@ public class ClosetController {
         } catch (IOException e) {
             messageLabel.setText("Error navigating back: " + e.getMessage());
         }
-    }    
+    }
 }
