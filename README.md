@@ -48,7 +48,7 @@ Create a `.env` file inside **`clothe-ai-backend/`**:
 cd clothe-ai-backend
 pip install -r requirements.txt
 
-# start dev server
+# start dev server:
 uvicorn app:app --reload
 # Server: http://127.0.0.1:8000
 # Docs:   http://127.0.0.1:8000/docs
